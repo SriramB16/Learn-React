@@ -1,8 +1,9 @@
 import Square from "./Square.jsx"
-import { useState } from "react"
-export default function Board(){
-    const[xIsNext, setXIsNext] = useState(true)
-    const [squares, setSquares] = useState(Array(9).fill(null));
+
+export default function Board({squares, onPlay, xIsNext}){
+    // const[xIsNext, setXIsNext] = useState(true)
+    // const [squares, setSquares] = useState(Array(9).fill(null));
+    // lifting state up
 
     function handleClick(i){
         if(squares[i] || calculateWinner(squares) ){
@@ -16,8 +17,8 @@ export default function Board(){
             nextSquares[i] = 'O';
         }
        
-        setSquares(nextSquares);
-        setXIsNext(!xIsNext)
+        onPlay(nextSquares);
+        // setXIsNext(!xIsNext)
 
     }
 
