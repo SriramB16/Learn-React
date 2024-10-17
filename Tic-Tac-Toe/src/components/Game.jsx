@@ -34,6 +34,7 @@ const currentSquares = history[currentMove];
     );
   });
 
+
   return (
     <div className="game">
       <div className="game-board">
@@ -45,3 +46,4 @@ const currentSquares = history[currentMove];
     </div>
   );
 }
+
