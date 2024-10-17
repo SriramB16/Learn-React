@@ -1,4 +1,3 @@
-
 import Game from "./components/Game.jsx";
 
 function App() {
