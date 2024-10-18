@@ -13,7 +13,7 @@ const PRODUCTS = [
 
 function App() {
   return <>
-    <FilterableProductTable />
+    <FilterableProductTable products={PRODUCTS}/>
   </>;
 }
 
